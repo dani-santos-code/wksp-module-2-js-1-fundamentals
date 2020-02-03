@@ -24,7 +24,7 @@ JavaScript executes a program from top to bottom in order.
 ### The `if` Statement
 
 - The `condition` must always evaluate to `true` for the code inside of the `{}` to actually run.
- 
+
 ```js
 if (condition) {
     // do something
@@ -67,6 +67,11 @@ let hunger = true;
 // 3. If it's 10pm, I go to bed. If not, I write code.
 let currentHour = 22;
 
+if(currentHour >= 22 || currentHour < 6) {
+    console.log("Go to bed!");
+} else {
+    console.log("Keep writing code");
+}
 ```
 
 ## Loops
@@ -117,6 +122,7 @@ while (number <= 12) {
 }
 
 // let's break that down.
+
 ```
 
 ---
@@ -126,7 +132,15 @@ Let's write a function that outputs 2^10 (two to the power of ten).
 ```js
 // Example
 
+let x = 2;
+let i = 0;
 
+while(i <= 10) {
+    x = x * 2;
+    i ++;
+}
+
+console.log(x)
 ```
 
 ---
@@ -180,6 +194,16 @@ Write a program that output all of the numbers from 0 to 25
 
 ```js
 // code here
+let x = 0;
+let y = 0;
+
+while (y < 25) {
+    console.log(x);
+    x = x + 1;
+    y = y + 1;
+}
+
+//odd numbers only
 
 ```
 
@@ -191,7 +215,11 @@ Write a program that output all of ODD the numbers from 0 to 25
 
 ```js
 // code here
-
+for (let number = 0; number <=25; number = number + 1) {
+    if (number % 2 === 1) {
+        console.log(number);
+    }
+}
 ```
 
 ---
@@ -202,6 +230,14 @@ Write a program that output all of the numbers from 0 to 25, but replaces all mu
 
 ```js
 // code here
+
+for (let number = 0; number <=25; number = number + 1) {
+    if (number % 5 === 0 && number !=0) {
+        console.log("five alive!");
+    } else {
+        console.log(number);
+    }
+}
 
 ```
 
