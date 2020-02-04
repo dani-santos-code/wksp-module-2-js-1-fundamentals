@@ -17,3 +17,14 @@
 // _#_#_#_#
 // #_#_#_#_
 // _#_#_#_#
+
+let pattern1 = "#_#_#_#_";
+let pattern2 = "_#_#_#_#";
+
+for (let i = 0; i <= 7; i++) {
+  if (i % 2 === 0) {
+    console.log(pattern1);
+  } else {
+    console.log(pattern2);
+  }
+}
